@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>
+main page
+</title>
+</head>
+<script>
+function validate()
+  {
+	var u=document.forms["myform"]["un"].value
+         var l=u.length
+if(l<4 || l>12)
+{
+alert("invalid loginname")
+document.forms["myform"]["un"].focus()
+return false;
+}
+var reg1= /^[a-zA-Z]+$/;
+if(reg1.test(u)==false)
+{
+alert("user name should not contain number");
+    document.forms["myform"]["un"].focus()
+return false;
+}
+
+     var reg= /^[a-zA-Z0-9!@#$%^&*]+$/;
+	var pw=document.forms["myform"]["pass"].value
+	var ab=pw.length
+   
+
+	
+		 if(reg.test(pw)==false) // || cd.test(pw)==false) 
+		 { 
+		  alert("password must contain one special character and one number")
+		  document.forms["myform"]["pass"].focus()
+		   return false; 
+		 }
+                 
+         if( ab<8)
+              {
+                alert("password must contain atleast 8 characters")
+		       document.forms["myform"]["pass"].focus()	
+                return false;
+		      }
+ 
+   var a=document.forms["myform"]["id"].value
+   var at=a.indexOf("@");
+  var dot=a.lastIndexOf(".");
+  
+    if(at<1 || dot<at+2 || dot+2>=a.length)
+    {  
+      alert("invalid email id");
+      document.forms["myform"]["id"].focus()
+      return false;
+    }
+
+    else
+     {
+      alert("email id verified")
+     } 
+}       
+</script>
+
+<body>
+<form name="myform" onsubmit="return validate()" action="tryfirst.html">
+<fieldset>
+<h1><marquee direction="scroll"><font size="20"; color="red"><i>Welcome to ibizworld</i> </font></marquee></h1>
+<table bgcolOr="cornsilk">
+<h1 style="text-align:center; color:red; font-size:50px"><em>Admin loginpage</em></h1>
+<br>
+<img src="admin.jpg" style="height:100px; width:100px">
+<br><br>
+
+<td></td><td></td><td> <font color="#980000" size="5" >Admin login id:</font></td><td></td><td></td><td><input type="text" name="un"><br><br></td>
+
+</tr>
+<br>
+<tr>
+<td></td><td></td><td> <font color="#980000" size="5" >password:</td><td></td><td></td><td><input type="password" name="pass"><br><br></td>
+</tr>
+<tr>
+<td></td><td></td><td> <font color="#980000" size="5" >Email id:</td><td></td><td></td><td><input type="text" name="id" placeholder="enter your e-mail id"><br><br></td>
+</tr>
+<tr>
+
+</table>
+<table bgcolcor="cornsilk">
+<tr><td><input type ="submit" value="login"></td>
+<td></td></tr>
+</table>
+</fieldset>
+
+
+</body>
+</html>

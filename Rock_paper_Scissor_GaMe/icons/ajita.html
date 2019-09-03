@@ -1,0 +1,41 @@
+
+<html>
+<head>
+<title>My web page</title>
+<script>
+
+document.addEventListener('DOMContentLoaded',function(){
+load_page('abcd');
+document.querySelectorAll('.nav-link').forEach(link=>{
+link.onclick=()=>{
+load_page(link.dataset.page);
+return false;
+};
+});
+});
+
+
+function load_page(name)
+{
+const request=new XMLHttpRequest();
+request.open('GET',`/${name}`);
+request.onload=()=>
+{
+const response=request.responseText;
+document.querySelector('#body').innerHTML=response;
+};
+request.send();
+
+
+
+</script>
+</head>
+<body>
+<ul id="nav">
+ 
+<li><a href="" class="nav-link" data-page="abcd">First page</a></li>
+<li><a href="" class="nav-link" data-page="tryf">second page</a></li>
+<li><a href="" class="nav-link" data-page="mainpage">third page</a></li>
+</ul><div id="body"></div>
+</body>
+</html>

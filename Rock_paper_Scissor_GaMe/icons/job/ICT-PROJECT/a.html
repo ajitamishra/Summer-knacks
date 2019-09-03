@@ -1,0 +1,58 @@
+<html>
+
+<script>
+function validate()
+  {
+	var u=document.forms["myform"]["uname"].value
+         var l=u.length
+if(l<4 || l>12)
+{
+alert("invalid loginname")
+document.forms["myform"]["uname"].focus()
+return false;
+}
+var reg1= /^[a-zA-Z]+$/;
+if(reg1.test(u)==false)
+{
+alert("user name should not contain number");
+    document.forms["myform"]["uname"].focus()
+return false;
+}
+
+     
+	var pw=document.forms["myform"]["pass"].value
+	
+         if( pw!=1234)
+              {
+                alert(" wrong password ")
+		       document.forms["myform"]["pass"].focus()	
+                return false;
+		      }
+ 
+   
+  
+     
+}       
+</script>
+<body>
+<form name="myform" onsubmit="return validate()" action="d.html">
+<!--form method="post" action="d.html"--!>
+<fieldset style="background-color:Blue;text-align:center;">
+<legend style="text-align:center;color:red;"><Font size="60">ADMIN LOGIN</Font></legend><br><br>
+<Font color="yellow">USERNAME-</Font>
+<input type="text" name="uname" style="text-align:center;background-color:yellow" placeholder="enter username" required="required"><br><br><br>
+<Font color="yellow">PASSWORD-</Font>
+<input type="password" name="pass" style="text-align:center;background-color:yellow" placeholder="enter password" required="required"><br><br><br>
+<a href="d.html"><button type="submit" >SUBMIT</button></a><br>
+
+</form>
+<body>
+
+
+
+
+
+</fieldset>
+</form>
+</body>
+</html>

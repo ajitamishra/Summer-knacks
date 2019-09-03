@@ -1,0 +1,127 @@
+<html>
+<head>
+<style>
+#container
+{
+height:100%;
+width:100%
+}
+#header
+
+{
+height:50px;
+width:100%
+}
+#menu
+{
+height:75px;
+width:100%;
+
+}
+#main
+{
+height:750px;
+width:100%;
+
+}
+#sidebar
+{
+height:100%;
+width:30%;
+
+}
+.social-block text-center
+{
+height:75px;
+width:40%
+}
+#footer
+{
+height:200px;
+width:100;
+clear:both
+}
+</style>
+</head>
+<body>
+
+      <div id="container">
+<div id="header">
+<h1 style="color:red; text-align:center"><i>YATRA</i></h1></div>
+	<div id="menu">
+      	
+      		
+      		
+      			
+	             	<h2 style="text-align:center">Welcome to Yatra!</h2>
+
+		             <h2 style="text-align:center"><em>Please enter your Login ID to proceed</em></h2>
+		          
+</div>
+<div id="main">
+ <img src="admin.jpg" style="height:100px; width:100px">
+
+
+
+
+
+<form class="login-form" id="main" name="main" autocomplete="off">
+	                <p class="fs-14 text-uppercase text-center text-gray login-email-title" id="login-title"><h3><b>Login ID</b></h3></p>
+	                <p class="fs-14 text-uppercase text-center text-gray login-email-title" id="create-login-title" style="display: none">email id</p>
+	                <p class="fs-14 text-center password-screen-label" id="password-screen-label"></p>
+<ul>
+	                   <li class="login-email-wrapper mt10">
+	                       <div class="yt-sme-mobile" id="login-input-wrapper">
+	                       	   <span id="isd-select-block" style="display: none">
+	                           <select class="yt-sme-select-mobile country-code-select required_field" style="opacity: 0;width: 20%;margin: 0px;height: 30px;z-index: 100;" name="isdCode" id="login-isd-selector" value="91"  data-regtype="selectOption" autocomplete="new-password"></select>
+	                           <span class="isd-container">
+	                               <span class="isd-value" id="isd-value">91</span>
+	                           </span>
+	                           </span>
+	                           <input type="text" class="yt-sme-mobile-input required_field email-login-box" id="login-input"  data-regtype="phoneno" name="login-input" autocomplete="new-password" placeholder="login ID" autofocus />
+	                       </div>
+	                   </li>
+<br>
+	                   <li class="login-password-wrapper">
+	                       <input type="password" autocomplete="new-password" placeholder="Enter your password" class="text-box-full mt10 wd100" id="login-password">
+	                   </li>
+	                   <p class="text-red fs-12 mt10 login-error" id="login-error"></p>
+	                   <p class="login-with-otp-label text-center">
+	                       <a href="javascript:void(0)" class="text-blue fs-14" id="login-using-otp"><span class="text-blue">OR Login using OTP</span></a></p>
+	                   <li class="login-continue-btn-wrapper">
+	                       <button type="button" class="main-btn mt25" id="login-continue-btn">Continue</button>
+	                   </li><br>
+	                   <li class="login-submit-btn-wrapper">
+	                   		<input type="hidden" id="modeOfLogin" value="email"/>
+	                       <button type="button" class="main-btn" id="login-submit-btn">Login</button>
+	                   </li>
+	                   <p class="short-message terms-of-service-label">By proceeding, you agree with our <a href="https://www.yatra.com/online/terms-of-service.html" target="_blank" class="text-blue">Terms of Service</a> & <a href="https://www.yatra.com/online/privacy-policy.html" target="_blank" class="text-blue"> Privacy Policy </a> </p>
+	
+	                   <p class="mt15 text-center fs-12 forgot-password-links"><a href="/social/common/yatra/forgotpassword.htm" class="text-blue text-capitalize text-center">Forgot Password?</a></p>
+	                   <p class="mt15 text-center fs-12 forgot-password-links"><a href="javascript:void(0)" class="text-blue" id="login-as-different-user">Login as a different user</a></p>
+	                </ul>
+	                
+	    	            <div class="border-block">
+	    	               <div class="bdr-1"></div>
+	    	            </div>
+	                
+
+
+	
+	             	             
+	             
+	             	<div class="social-block text-center">
+	             		<div class="media-buttons">
+	                		<button type="button" class="fb-btn" id="fb-login-btn"><i class="fa fa-facebook-square"></i>connect with facebook</button>
+<br><br>
+	                		<button class="button gplus-btn" type="button" id="google-login-btn"><i class="fa fa-google-plus-square"></i>connect with Google</button>
+	                	
+</div>
+</form>
+	                	
+
+	                
+</div> 
+</div>     		
+ </body>   
+</html>  	

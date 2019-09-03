@@ -1,0 +1,176 @@
+
+<html>
+<body>
+<head>
+<title>form validation</title>
+<script type="text/javascript">
+function validateform()
+{
+var x=document.forms["myform"]["un"].value;
+var len=x.length;
+if(len==0)
+ {
+alert("please enter valid user-name");
+return false;
+  }
+if(len<7 || len>12)
+ {
+alert("invalid username");
+return false;
+ }
+else
+ {
+alert("user-name validated");
+//return true;
+ }
+
+//password
+
+var y=document.forms["myform"]["pass"].value;
+var l=y.length;
+if(l==0)
+ {
+alert("pass-word can't be empty");
+return false;
+ }
+//var reg=/^([A-Za-z0-9_\-\.])+
+//if(reg.test(y)==false)
+//{
+/*alert("enter valid password");
+return true;}*/
+if(l<5 || l>10)
+ {
+alert("invalid password");
+  return false;
+ }
+else
+ {
+alert("password validated");
+
+  }
+//age
+var r=document.forms["myform"]["age"].value
+
+ 
+if(r<21)
+ {
+ alert("age can't be less than 21")
+  	return false;
+  }
+else
+ {
+   alert("age verified")
+ }
+
+}
+
+</script>
+</head>
+<form name="myform" onsubmit=" return validateform()">
+
+<fieldset align="center">
+<table width="collapse">
+
+<tr>
+<th></th>
+<th></th>
+</tr>
+
+<legend font-size="100">SUBMIT FORM </legend>
+
+<tr>
+<td>USER-NAME*</td>
+<td><input type="text" name="un"></td>
+</tr>
+
+<tr>
+<td>PASSWORD*</td>
+<td><input type="text" name="pass"></td>
+</tr>
+
+<tr>
+<td>CONFIRM PASSWORD*</td>
+<td><input type="text" name="conf.pass"></td>
+</tr>
+
+<tr>
+<td>FIRST NAME</td>
+<td><input type="text" name="fn"></td>
+</tr>
+
+<tr>
+<td>LAST NAME</td>
+<td><input type="text" name="ln"></td>
+</tr>
+
+<tr>
+<td>AGE</td>
+<td><input type="text" name="age"></td>
+</tr>
+
+<tr>
+<td>E-MAIL</td>
+<td><input type="text" name="em"></td>
+</tr>
+
+<tr>
+<td>PHONE</td>
+<td><input type="text" name="ph"></td>
+</tr>
+
+<tr>
+<td>FAX</td>
+<td><input type="text" name="fax"></td>
+</tr>
+
+<tr>
+<td>DATE OF BIRTH</td>
+<td><input type="text" name="dob"></td>
+</tr>
+
+<tr>
+<td>WEBSITE</td>
+<td><input type="text" name="web">
+</td>
+</tr>
+
+<tr>
+<td>COUNTRY</td>
+<td><select name="country">
+<option value="India">India</option>
+<option value="India">pakistan</option>
+<option value="India">australia</option>
+<option value="India">Iran</option>
+<option value="India">Italy</option>
+<option value="India">Hungary</option>
+<option value="India">Brazil</option>
+<option value="India">Spain</option>
+<option value="India">Hongkong</option>
+<option value="India">Iraq</option></td>
+</tr>
+
+<tr>
+<td>GENDER</td>
+<td><input type="radio" value="male">Male
+<input type="radio" value="female">Female</td>
+</tr>
+<tr>
+<td>
+DISCLAIMER
+</td>
+<td>
+<input type="checkbox">
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td><button onclick="submit">submit</button></td>
+</tr>
+
+
+</table>
+</fieldset>
+</form>
+</body>
+</html>

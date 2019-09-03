@@ -1,0 +1,75 @@
+<html>
+
+<script>
+function validate()
+  {
+	var u=document.forms["frm"]["uname"].value
+         var l=u.length
+if(l<4 || l>12)
+{
+alert("invalid loginname")
+document.forms["frm"]["uname"].focus()
+return false;
+}
+<!--
+var reg1= /^[a-zA-Z]+$/;
+if(reg1.test(u)==false)
+{
+alert("user name should not contain number");
+    document.forms["frm"]["uname"].focus()
+return false;
+}
+
+     var reg= /^[a-zA-Z0-9!@#$%^&*]+$/;
+	var pw=document.forms["frm"]["pass"].value
+	var ab=pw.length
+   
+
+	
+		 if(reg.test(pw)==false) // || cd.test(pw)==false) 
+		 { 
+		  alert("password must contain one special character and one number")
+		  document.forms["frm"]["pass"].focus()
+		   return false; 
+		 }
+                 
+         if( ab<8)
+              {
+                alert("password must contain atleast 8 characters")
+		       document.forms["frm"]["pass"].focus()	
+                return false;
+		      }
+ 
+   var a=document.forms["frm"]["id"].value
+   var at=a.indexOf("@");
+  var dot=a.lastIndexOf(".");
+  
+    if(at<1 || dot<at+2 || dot+2>=a.length)
+    {  
+      alert("invalid email id");
+      document.forms["frm"]["id"].focus()
+      return false;
+    }
+
+    
+     else alert("registered successfully")--!>
+    
+}       
+</script>
+<body>
+<form name="frm" onsubmit="return validate()">
+<fieldset style="background-color:Blue;text-align:center;">
+<legend style="text-align:center;color:red;"><Font size="60">USER REGISTRATION</Font></legend><br><br>
+<Font color="yellow">USERNAME-</Font>
+<input type="text" name="uname" style="text-align:center;background-color:yellow" placeholder="enter username" required="required"><br><br><br>
+<Font color="yellow">USER_ID-</Font>
+<input type="text" name="uid" style="text-align:center;background-color:yellow" placeholder="enter user_id" required="required"><br><br><br>
+<Font color="yellow">PASSWORD-</Font>
+<input type="password" name="pass" style="text-align:center;background-color:yellow" placeholder="enter password" required="required"><br><br><br>
+<center><button type="submit" >SUBMIT</button></center><br>
+
+
+</fieldset>
+</form>
+</body>
+</html>

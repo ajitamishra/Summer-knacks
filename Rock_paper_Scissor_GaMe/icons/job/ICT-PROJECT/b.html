@@ -1,0 +1,125 @@
+<html>
+<head>
+<script>
+function validate()
+  {
+	var u=document.forms["myform"]["uname"].value
+         var l=u.length
+if(l<4 || l>12)
+{
+alert("invalid loginname")
+document.forms["myform"]["uname"].focus()
+return false;
+}
+}
+<!--
+var reg1= /^[a-zA-Z]+$/;
+if(reg1.test(u)==false)
+{
+alert("user name should not contain number");
+    document.forms["myform"]["uname"].focus()
+return false;
+}
+
+
+    var reg= /^[a-zA-Z0-9!@#$%^&*]+$/;
+	var pw=document.forms["myform"]["pass"].value
+	var ab=pw.length--!>
+   
+
+	
+    
+		if(reg.test(pw)==false) // || cd.test(pw)==false) 
+		 { 
+		  alert("password must contain one special character and one number")
+		  document.forms["myform"]["pass"].focus()
+		   return false; 
+		 }
+                 
+         if( ab<8)
+              {
+                alert("password must contain atleast 8 characters")
+		       document.forms["myform"]["pass"].focus()	
+                return false;
+		      }
+ var a=document.forms["myform"]["uid"].value
+   var at=a.indexOf("@");
+  var dot=a.lastIndexOf(".");
+  
+    if(at<1 || dot<at+2 || dot+2>=a.length)
+    {  
+      alert("invalid user id");
+      document.forms["myform"]["uid"].focus()
+      return false;
+    }
+<!--var cu=document.forms["myform"]["cname"].value
+         var l1=cu.length
+if(l1<4 || l1>12)
+{
+alert("invalid companyname")
+document.forms["myform"]["cname"].focus()
+return false;
+}
+var reg2= /^[a-zA-Z]+$/;
+if(reg2.test(cu)==false)
+{
+alert("company name should not contain number");
+    document.forms["myform"]["cname"].focus()
+return false;
+}
+
+     var reg2= /^[a-zA-Z0-9!@#$%^&*]+$/;
+	var pw=document.forms["myform"]["pass1"].value
+	var ab=pw.length
+   
+
+	
+		 if(reg.test(pw)==false) // || cd.test(pw)==false) 
+		 { 
+		  alert(" company password must contain one special character and one number")
+		  document.forms["myform"]["pass1"].focus()
+		   return false; 
+		 }
+ 
+    else
+     {
+      alert(" logged in successfully")
+     } 
+     
+} --!>      
+</script>
+</head>
+<body>
+
+<form name="myform" onsubmit="return validate()">
+<fieldset style="background-color:Blue;text-align:center;">
+<legend style="text-align:left;color:red;"><Font size="10">USER LOGIN</Font></legend><br><br>
+<Font color="yellow">USERNAME-</Font>
+<input type="text" name="uname" style="text-align:center;background-color:yellow" placeholder="enter username" required="required"><br>
+<Font color="yellow">USER_ID-</Font>
+<input type="text" name="uid" style="text-align:center;background-color:yellow" placeholder="enter user_id" required="required"><br>
+<Font color="yellow">PASSWORD-</Font>
+<input type="password" name="pass" style="text-align:center;background-color:yellow" placeholder="enter password" required="required"><br>
+</fieldset><br>
+<fieldset style="background-color:Blue;text-align:center;">
+<legend style="text-align:left;color:red;"><Font size="10">COMPANY DETAILS</Font></legend><br><br>
+<Font color="yellow">COMPANY NAME-</Font>
+<input type="text" name="cname" style="text-align:center;background-color:yellow" placeholder="enter username" required="required"><br>
+<Font color="yellow">COMPANY_ID-</Font>
+<input type="text" name="cid" style="text-align:center;background-color:yellow" placeholder="enter user_id" required="required"><br>
+<Font color="yellow">PASSWORD-</Font>
+<input type="password" name="pass1" style="text-align:center;background-color:yellow" placeholder="enter password" required="required"><br>
+</fieldset><br>
+<fieldset style="background-color:Blue;text-align:center;">
+<legend style="text-align:left;color:red;"><Font size="10">JOB DETAILS</Font></legend><br><br>
+<Font color="yellow">JOB_ID-</Font>
+<input type="text" name="sname" style="text-align:center;background-color:yellow" placeholder="enter username" required="required"><br>
+<Font color="yellow">SALARY-</Font>
+<input type="text" name="sid" style="text-align:center;background-color:yellow" placeholder="enter user_id" required="required"><br>
+<Font color="yellow">JOB DESCRIPTION-</Font>
+<input type="password" name="pass2" style="text-align:center;background-color:yellow" placeholder="enter password" ><br>
+</fieldset><br>
+<center><button type="submit" >SUBMIT</button></center>
+</form>
+</body>
+</html>

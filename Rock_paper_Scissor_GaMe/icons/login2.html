@@ -1,0 +1,142 @@
+<html>
+<head>
+<style>
+#container
+{
+height:100%;
+width:100%
+}
+#header
+
+{
+height:50px;
+width:100%
+}
+#menu
+{
+height:75px;
+width:100%;
+background-color:#D3D3D3
+
+}
+#main
+{
+height:750px;
+width:100%;
+background-color:#D3D3D3
+}
+#sidebar
+{
+height:100%;
+width:30%;
+
+}
+.social-block text-center
+{
+height:75px;
+width:40%
+}
+#footer
+{
+height:200px;
+width:100;
+clear:both
+}
+fieldset
+   {
+     max-width:400px;
+     padding:10px;	 
+	 margin:auto;
+    }
+table
+   {
+     align:center; 
+     border-collapse:collapse;
+  width:100%;
+   margin:auto;
+   }
+</style>
+</head>
+<body>
+
+      <div id="container">
+<div id="header">
+<h1 style="color:red; text-align:center"><i>YATRA</i></h1></div>
+	<div id="menu">
+      	
+      		
+      		
+      			
+	             	<h2 style="text-align:center">Welcome to Yatra!</h2>
+
+		             <h2 style="text-align:center"><em>Please enter your Login ID to proceed</em></h2>
+		          
+</div>
+<div id="main">
+<script>
+function validate()
+  {
+    var x=document.forms["myform"]["fn"].value
+    var y=x.length
+     if(y==0)
+     {
+      alert("please enter your name")
+      document.forms["myform"]["fn"].focus()
+       return false;      
+     }
+   var a=document.forms["myform"]["id"].value
+   var at=a.indexOf("@");
+  var dot=a.lastIndexOf(".");
+  
+    if(at<1 || dot<at+2 || dot+2>=a.length)
+    {  
+      alert("invalid email id");
+      document.forms["myform"]["id"].focus()
+      return false;
+    }
+
+    else
+     {
+      alert("email id verified")
+     }
+
+  }
+</script>
+</head>
+<body>
+<form name="myform" onsubmit="return validate()" onsubmit target="file:///C:/Users/DELL/Desktop/formk99js.html">
+<fieldset>
+
+<table>
+<img src="admin.jpg" style="height:100px; width:100px">
+
+<tr>
+<td></td><td></td><td>First Name:</td><td></td><td></td><td><input type="text" name="fn"><br><br></td>
+</tr>
+<br>
+<tr>
+<td></td><td></td><td>Last Name:</td><td></td><td></td><td><input type="text" name="ln"><br><br></td>
+</tr>
+<tr>
+<td></td><td></td><td>Email id:</td><td></td><td></td><td><input type="text" name="id"><br><br></td>
+</tr>
+<tr>
+<td></td><td></td><td>Password:</td><td></td><td></td><td><input type="text" name="pass"><br><br></td>
+<br><br><tr><td><a href="file:///C:/Users/DELL/Desktop/ict%20project/loginpage.html" target="_blank">Forgot password</a></td></tr>
+
+
+<tr><td><input type ="submit" value="login"></td></tr>
+<tr><a href="file:///C:/Users/DELL/Desktop/ict%20project/loginpage.html" target="_blank">already have a account?? sign up now</tr><br><br>
+</table>
+
+
+</fieldset>
+</body>
+</html>
+
+
+
+
+
+
+	                      

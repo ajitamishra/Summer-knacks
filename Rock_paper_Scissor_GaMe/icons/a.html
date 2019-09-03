@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>My web page</title>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+document.querySelector('#submit').disabled=true;
+document.querySelector('#task').onkeyup=() =>{
+if(document.querySelector('#task').value.length>0)
+document.querySelector('#submit').disabled=false
+else
+document.querySelector('#submit').disabled=true
+};
+
+document.querySelector('#new-task').onsubmit=() =>
+{
+const li=document.createElement('li');
+li.innerHTML=document.querySelector('#task').value;
+document.querySelector('#tasks').append(li);
+document.querySelector('#task').value='';
+document.querySelector('#submit').disabled=true;
+return false;
+};
+});
+</script>
+</head>
+<body>
+<h1>TASKS</h1>
+<form id="new-task">
+<ul id="tasks"></ul>
+<input id="task" autocomplete="off" autofocus placeholder="task" type="text">
+<input id="submit" type="submit">
+</form>
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+<html>
+<body>
+<head>
+<title>form validation</title>
+<script type="text/javascript">
+function validateform()
+{
+var x=document.forms["myform"]["un"].value;
+var len=x.length;
+if(len==0)
+ {
+alert("please enter valid user-name");
+return false;
+  }
+if(len<7 || len>12)
+ {
+alert("invalid username");
+document.forms["myform"]["un"].focus();
+return false;
+ }
+else
+ {
+alert("user-name validated");
+//return true;
+ }
+
+//password
+
+var y=document.forms["myform"]["pass"].value;
+var l=y.length;
+if(l==0)
+ {
+alert("pass-word can't be empty");
+return false;
+ }
+ 
+var reg=/^([A-Za-z0-9_\-\.\$\#\*\@])+$/;
+if(reg.test(y)==false)
+{
+alert("invalid password")
+document.forms["myform"]["conf.pass"].focus();
+return false;
+}
+
+
+if(l<5 || l>10)
+ {
+alert("invalid password");
+document.forms["myform"]["pass"].focus();
+  return false;
+ }
+else
+ {
+alert("password validated");
+
+  
+  }
+  //confirm password
+  var c=document.forms["myform"]["conf.pass"].value
+  if(c.localeCompare(y)==-1 || c.localeCompare(y)==1)
+  {
+  alert("password incorrect");
+  document.forms["myform"]["conf.pass"].focus();
+  return false;
+  }
+  if(c.localeCompare(y)==0)
+  {
+  alert("password confirmed");
+  }
+//age
+
+var r=document.forms["myform"]["age"].value
+var leng=r.length;
+if(leng==0)
+{
+alert("age can't be empty");
+document.forms["myform"]["age"].focus();
+return false;}
+ 
+if(r<21)
+ {
+ alert("age can't be less than 21");
+ document.forms["myform"]["age"].focus();
+  	return false;
+  }
+else
+ {
+   alert("age verified")
+ }
+ //E-mail
+ 
+ 
+ var e=document.forms["myform"]["em"].value;
+ var atpos=e.indexOf("@");
+ var dotpos=e.lastIndexOf(".");
+ var i=e.length
+ var regis=/^([A-Za-z0-9_\-\.\$\#\*\@])+$/;
+if(regis.test(e)==false)
+{
+alert("invalid e-mail")
+document.forms["myform"]["em"].focus();
+return false;
+}
+ 
+ if(atpos<1 || dotpos<atpos+2 || dotpos+2>=i)//
+ {
+ alert("invalid e-mail");
+ document.forms["myform"]["em"].focus();
+ return false;
+
+}
+else
+ {
+ alert("e-mail validated");
+ }
+ //phone no.
+ 
+ 
+ var p=document.forms["myform"]["ph"].value;
+ //var max=p.length;
+ var x=p.substring(0,1);
+ var l=p.length
+ var re=/^(0-9)$/
+ if(re.test(p)==false)
+ {
+ alert("invalid phone no.")
+ document.forms["myform"]["ph"].focus();
+ return false;
+ }
+ if(l==0)
+{
+alert("mobile no. can't be empty");
+document.forms["myform"]["ph"].focus();
+ return false;
+}
+ if(l!=10)
+ {
+ alert(" invalid mobile no.");
+ document.forms["myform"]["ph"].focus();
+ return false;
+}
+
+if(x!=9 && x!=8 && x!=7 && x!=6)
+{
+alert("invalid no.")
+document.forms["myform"]["ph"].focus();
+return false;
+}
+else
+{
+alert("mobile no validated");
+}
+}
+
+
+</script>
+</head>
+<head>
+<style>
+input[type=text]
+{
+box-sizing:border-box border:2px solid red}
+</style>
+</head>
+<form name="myform" onsubmit=" return validateform()">
+
+
+<table align="center" border="1%" width="30%" height="10%" bordercolor="blue">
+<tr>
+<th><a href="" style="color:blue" font-size=20>Submit form</a></th>
+</tr>
+<tr>
+<th>
+<table  align="center" width="40%">
+
+<tr>
+<th></th>
+<th></th>
+</tr>
+
+<tr>
+<th>USER-NAME*</th>
+<td><input type="text" name="un"></td> 
+</tr>
+
+<tr>
+<th>PASSWORD*</th>
+<td><input type="password" name="pass"></td>
+</tr>
+
+<tr>
+<th>CONFIRM PASSWORD*</th>
+<td><input type="password" name="conf.pass"></td>
+</tr>
+
+<tr>
+<th>FIRST NAME*</th>
+<td><input type="text" name="fn"></td>
+</tr>
+
+<tr>
+<th>LAST NAME</th>
+<td><input type="text" name="ln"></td>
+</tr>
+
+<tr>
+<th>AGE*</th>
+<td><input type="text" name="age"></td>
+</tr>
+
+<tr>
+<th>E-MAIL*</th>
+<td><input type="text" name="em"></td>
+</tr>
+
+<tr>
+<th>PHONE</th>
+<td><input type="text" name="ph"></td>
+</tr>
+
+<tr>
+<th>FAX</th>
+<td><input type="text" name="fax"></td>
+</tr>
+
+<tr>
+<th>DATE OF BIRTH</th>
+<td><input type="date" name="dob"></td>
+</tr>
+
+<tr>
+<th>WEBSITE</th>
+<td><input type="text" name="web">
+</td>
+</tr>
+
+<tr>
+<th>COUNTRY</th>
+<td><select name="country">
+<option value="India">India</option>
+<option value="India">pakistan</option>
+<option value="India">australia</option>
+<option value="India">Iran</option>
+<option value="India">Italy</option>
+<option value="India">Hungary</option>
+<option value="India">Brazil</option>
+<option value="India">Spain</option>
+<option value="India">Hongkong</option>
+<option value="India">Iraq</option></td>
+</tr>
+
+<tr>
+<th>GENDER</th>
+<td><input type="radio" value="male">Male
+<input type="radio" value="female">Female</td>
+</tr>
+<tr>
+<th>
+DISCLAIMER
+</th>
+<td>
+<input type="checkbox">
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td><button onclick="submit">submit</button></td>
+</tr>
+
+
+</table>
+
+</form>
+</body>
+</html>

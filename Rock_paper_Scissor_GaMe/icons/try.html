@@ -1,0 +1,121 @@
+
+<html>
+<head>
+<title>
+tourists site login page
+</title>
+<style>
+input[type=text]
+
+ {
+    width: 100%;
+    
+    border:  solid #980000;
+    border-radius: 0px;
+}
+
+fieldset
+   {
+     max-width:400px;
+     padding:10px;	 
+	 margin:auto;
+      border:0;
+    }
+table
+   {
+     align:center; 
+     border-collapse:collapse;
+  width:100%;
+   margin:auto;
+ cellpadding:10;
+ cellspacing:10;
+   }
+
+input[type=submit]
+{
+    background-color: #7CFC00;
+	border-radius:50%;
+	padding:28px 14px;
+	font-size:20px;
+    color: white;
+}
+
+</style>
+<script>
+function validate()
+  {
+    var x=document.forms["myform"]["fn"].value
+    var y=x.length
+     if(y==0)
+     {
+      alert("please enter your name")
+      document.forms["myform"]["fn"].focus()
+       return false;      
+     }
+   var a=document.forms["myform"]["id"].value
+   var at=a.indexOf("@");
+  var dot=a.lastIndexOf(".");
+  
+    if(at<1 || dot<at+2 || dot+2>=a.length)
+    {  
+      alert("invalid email id");
+      document.forms["myform"]["id"].focus()
+      return false;
+    }
+
+    else
+     {
+      alert("email id verified")
+     }
+
+ var h=document.forms["myform"]["ph"].value
+  var b=h.substring(0,1)
+  var c=h.length
+     if(c>10)
+     {
+       alert("invalid phone no")
+	   return false;
+     }
+ 
+ else if( b!=6 && b!=7 && b!=8 && b!=9)
+      {
+         alert("invalid phone no ")
+		 return false;
+       }
+ 
+  else
+      {
+         alert("phone no verified") 
+      }
+
+  }
+</script>
+</head>
+<body background="desert.jpg">
+<form name="myform" onsubmit="return validate()" action="file:///C:/Users/DELL/Desktop/FIRST.html">
+<fieldset>
+<marquee direction="scroll"><font size="10"> Welcome</font></marquee>
+<table bgcolOr="cornsilk">
+Login page ..
+<br><br><br><tr>
+<td></td><td></td><td> <font color="#980000" size="5" >First Name:</font></td><td></td><td></td><td><input type="text" name="fn"><br><br></td>
+</tr>
+<br>
+<tr>
+<td></td><td></td><td> <font color="#980000" size="5" >Last Name:</td><td></td><td></td><td><input type="text" name="ln"><br><br></td>
+</tr>
+<tr>
+<td></td><td></td><td> <font color="#980000" size="5" >Email id:</td><td></td><td></td><td><input type="text" name="id"><br><br></td>
+</tr>
+<tr>
+<td></td><td></td><td><font color="#980000" size="5" >Phone no:</td><td></td><td></td><td><input type="text" name="ph"><br><br></td>
+</tr>
+</table>
+<table bgcolcor="cornsilk">
+<tr><td><input type ="submit" value="submit"></td>
+<td><a href="file:///C:/Users/DELL/Desktop/ict%20project/loginpage.html"><font size="4">already have a account?? sign up now</font></a
+</td></tr>
+</table>
+</fieldset>
+</body>
+</html>

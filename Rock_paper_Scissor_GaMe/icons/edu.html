@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>My web page</title>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+load_page('abcd');
+
+
+function load_page(name)
+{
+const request=new XMLHttpRequest();
+request.open('GET',`/${name}`);
+request.onload=()=>
+{
+const response=request.responseText;
+document.querySelector('#body').innerHTML=response;
+};
+request.send();
+
+
+
+</script>
+</head>
+<body>
+<h1 id="hello">hello!</h1>
+<button id="red">Red</button>
+<button id="blue">blue</button>
+<button id="green">green</button></body>
+</html>

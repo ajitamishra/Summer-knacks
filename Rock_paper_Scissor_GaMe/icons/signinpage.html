@@ -1,0 +1,173 @@
+
+<html>
+<head>
+<title>
+tourists site login page
+</title>
+<style>
+input[type=text]
+
+ {
+    width: 100%;
+    
+    border:  solid #980000;
+    border-radius: 0px;
+}
+
+fieldset
+   {
+     max-width:400px;
+     padding:10px;	 
+	 margin:auto;
+      border:0;
+s    }
+table
+   {
+     align:center; 
+     border-collapse:collapse;
+  width:100%;
+   margin:auto;
+ cellpadding:10;
+ cellspacing:10;
+   }
+
+input[type=submit]
+{
+    background-color: #7CFC00;
+	border-radius:50%;
+	padding:28px 14px;
+	font-size:20px;
+    color: white;
+}
+
+</style>
+<script>
+function validate()
+  {
+    
+
+     var reg= /^[a-zA-Z0-9!@#$%^&*]+$/;
+	var pw=document.forms["myform"]["pass"].value
+	var ab=pw.length
+   
+
+	
+		 if(reg.test(pw)==false) // || cd.test(pw)==false) 
+		 { 
+		  alert("password must contain one special character and one number")
+		  document.forms["myform"]["pass"].focus()
+		   return false; 
+		 }
+                 
+         if( ab<8)
+              {
+                alert("password must contain atleast 8 characters")
+		       document.forms["myform"]["pass"].focus()	
+                return false;
+		      }                      
+  var cp=document.forms["myform"]["cnfmpw"].value
+   var n=pw.localeCompare(cp)  
+   if(n!=0)
+      {
+        alert("please re confirm  your password")
+         document.forms["myform"]["cnfmpw"].focus()        
+         return false;
+      }
+   else
+   {
+     alert("password verified")
+   }
+
+
+
+
+
+    
+
+
+
+    var x=document.forms["myform"]["fn"].value
+    var y=x.length
+     if(y==0)
+     {
+      alert("please enter your name")
+      document.forms["myform"]["fn"].focus()
+       return false;      
+     }
+   var a=document.forms["myform"]["id"].value
+   var at=a.indexOf("@");
+  var dot=a.lastIndexOf(".");
+  
+    if(at<1 || dot<at+2 || dot+2>=a.length)
+    {  
+      alert("invalid email id");
+      document.forms["myform"]["id"].focus()
+      return false;
+    }
+
+    else
+     {
+      alert("email id verified")
+     }
+
+ var h=document.forms["myform"]["ph"].value
+  var b=h.substring(0,1)
+  var c=h.length
+     if(c>10)
+     {
+       alert("invalid phone no")
+	   return false;
+     }
+ 
+ else if( b!=6 && b!=7 && b!=8 && b!=9)
+      {
+         alert("invalid phone no ")
+		 return false;
+       }
+ 
+  else
+      {
+         alert("phone no verified") 
+      }
+
+  }
+</script>
+</head>
+<body background="IMG-20181106-WA0004.jpg">
+<form name="myform" onsubmit="return validate()" action="file:///C:/Users/DELL/Desktop/ict%20project/mainpage.html">
+<fieldset>
+<marquee direction="scroll"><font size="10"> Welcome</font></marquee>
+<table bgcolOr="cornsilk">
+Login page ..
+<br><br><br><tr></tr>
+<tr>
+<td></td><td></td><td><font color="#980000" size="5" >Username:</font></td><td></td><td></td><td><input type="text" name="us"><br><br></td>
+</tr>
+<tr>
+<td></td><td></td><td> <font color="#980000" size="5" >Password:</font></td><td></td><td></td><td><input type="text" name="pass"><br><br></td>
+</tr>
+<tr>
+<td></td><td></td><td> <font color="#980000" size="5" >Confirm Password:</font></td><td></td><td></td><td><input type="text" name="cnfmpw"><br><br></td>
+</tr>
+<tr>
+<td></td><td></td><td> <font color="#980000" size="5" >First Name:</font></td><td></td><td></td><td><input type="text" name="fn"><br><br></td>
+</tr>
+<br>
+<tr>
+<td></td><td></td><td> <font color="#980000" size="5" >Last Name:</td><td></td><td></td><td><input type="text" name="ln"><br><br></td>
+</tr>
+<tr>
+<td></td><td></td><td> <font color="#980000" size="5" >Email id:</td><td></td><td></td><td><input type="text" name="id"><br><br></td>
+</tr>
+<tr>
+<td></td><td></td><td><font color="#980000" size="5" >Phone no:</td><td></td><td></td><td><input type="text" name="ph"><br><br></td>
+</tr>
+</table>
+<table bgcolcor="cornsilk">
+<tr><td><input type ="submit" value="submit"></td>
+<td><a href="file:///C:/Users/DELL/Desktop/ict%20project/loginpage.html"><font size="4">already have a account?? sign up now</font></a
+</td></tr>
+</table>
+</fieldset>
+</body>
+</html>
