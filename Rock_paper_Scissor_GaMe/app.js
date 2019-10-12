@@ -31,7 +31,7 @@ const game = () => {
     options.forEach(option => {
       option.addEventListener("click", function() {
         //Computer Choice
-        let num = Math.floor(Math.random() * 100);
+        let num = Math.floor(Math.random() * 100000);
         num  = num%3;
         num++;
         const computerNumber = num;
